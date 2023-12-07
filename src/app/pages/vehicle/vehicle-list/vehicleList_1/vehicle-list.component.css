@@ -1,0 +1,33 @@
+ /* Row hover bakground */
+ .mat-row:hover .mat-cell{
+  background-color: aliceblue;
+  
+}
+
+.highlighted {
+background-color: lavenderblush;
+}
+.button-style button {
+margin-left: 85%;
+margin-top: 30px;
+background-color:lightpink;
+color: white;
+}
+.custom-button{
+margin-right: 10px;
+}
+
+
+.mat-header-cell{
+font-weight: bold;
+font-size: 16px;
+}
+.mat-raised-button.custom-button {
+min-width:40px;
+padding: 0px;
+}
+::ng-deep .mat-tooltip {
+font-weight: bold;
+font-size: 15px;
+}
+

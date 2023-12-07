@@ -1,0 +1,11 @@
+/* Add this CSS to your stylesheet or style section */
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.custom-button {
+    margin-right: 10px;
+}

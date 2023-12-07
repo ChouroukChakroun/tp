@@ -1,0 +1,16 @@
+.gitignore
+.openapi-generator-ignore
+README.md
+api.module.ts
+api/api.ts
+api/maintenanceController.service.ts
+api/vehicleController.service.ts
+configuration.ts
+encoder.ts
+git_push.sh
+index.ts
+model/maintenanceDto.ts
+model/models.ts
+model/vehicleDto.ts
+param.ts
+variables.ts

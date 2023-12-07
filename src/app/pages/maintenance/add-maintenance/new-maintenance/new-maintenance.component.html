@@ -1,0 +1,52 @@
+<form class="form-container">
+    <mat-grid-list class="grid-custom" cols="2" rowHeight="300px">
+        <mat-grid-tile>
+            <div class="controles-container">
+                <div class="default-time-example form-floating mb-3 ">
+                    <mat-icon matPrefix>update</mat-icon>
+                    <input aria-label="default time" [ngxTimepicker]="defaultValue" [value]="'05:11'" readonly [(ngModel)]="selectedTime">
+                    <ngx-material-timepicker  #defaultValue ></ngx-material-timepicker>
+                </div>
+              
+
+                <mat-form-field >
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker" [(ngModel)]="maintenanceDto.date">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field >
+                    <input matInput required placeholder="Task of maintenance" name="task" [(ngModel)]="maintenanceDto.task">
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+              
+               
+                <div class="button-row">
+                    <button mat-raised-button color="accent" class="custom-button" (click)="submit()">
+                        <mat-icon matPrefix>send</mat-icon>Submit
+                    </button>
+                    <button mat-raised-button color="primary" class="custom-button">
+                        <mat-icon
+                            matPrefix>cancel</mat-icon>Cancel
+                    </button>
+                </div>
+
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="controles-container">
+                <mat-form-field >
+                    <input matInput required placeholder="Cost" name="cost" [(ngModel)]="maintenanceDto.cost">
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Select vehicle</mat-label>
+                     <mat-select name="vehicle">
+                         <mat-option *ngFor="let vehicle of vehicleList" [value]="vehicle.vin" >{{vehicle.vin}}</mat-option>
+                     </mat-select>
+                 </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+    </mat-grid-list>
+</form>

@@ -1,0 +1,53 @@
+.default-time-example {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    /* Set the desired font-family */
+}
+
+.default-time-example input {
+    padding: 8px;
+    /* Adjust padding as needed */
+    font-size: 16px;
+    /* Set the desired font size */
+
+}
+
+.default-time-example ngx-material-timepicker {
+    position: relative;
+    margin-left: 10px;
+    /* Add some space between the input and timepicker */
+}
+
+.grid-custom {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+
+}
+
+.form-container {
+    padding: 60px;
+    margin-top: 50px;
+    border-radius: 12px
+}
+
+.border-field {
+    border: 2px solid blue;
+    ;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.custom-button:hover {
+    background-color: #ff8a65;
+   
+}
+.custom-button {
+    margin-left: 10px;
+    border-radius: 20px;
+}

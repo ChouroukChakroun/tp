@@ -1,0 +1,14 @@
+<mat-form-field>
+  <mat-label> <mat-icon matSuffix>edit</mat-icon>
+    Enter model
+  </mat-label>
+  <input matInput [(ngModel)]="inputSelected">
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Select brand</mat-label>
+  <mat-select [(ngModel)]="selectedValue" name="brand">
+    <mat-option *ngFor="let brand of brandList" [value]="brand.name">{{brand.name}}</mat-option>
+  </mat-select>
+</mat-form-field>
+<button mat-raised-button color="accent" class="custom-button" (click)="addModel()">Submit</button>
+<button mat-raised-button color="primary" class="custom-button" (click)="close()">Cancel</button>
