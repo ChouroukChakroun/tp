@@ -4,10 +4,10 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-title ">Vehicles</h4>
+                        <h4 class="card-title ">Produits</h4>
                     </div>
                     <div class="button-style"> <button mat-raised-button (click)="addVehicle()"><mat-icon
-                        matSuffix>add</mat-icon>New vehicle
+                        matSuffix>add</mat-icon>New produit
                         </button>
                     </div>
 
@@ -15,22 +15,22 @@
 
                         <mat-table [dataSource]="dataSource">
                             <ng-container matColumnDef="vin">
-                                <mat-header-cell *matHeaderCellDef> Vin </mat-header-cell>
-                                <mat-cell *matCellDef="let row"> {{row.vin}} </mat-cell>
+                                <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                                <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
                             </ng-container>
                             <ng-container matColumnDef="placeNumber">
-                                <mat-header-cell *matHeaderCellDef> PlaceNumber </mat-header-cell>
-                                <mat-cell *matCellDef="let row"> {{row.placeNumber}} </mat-cell>
+                                <mat-header-cell *matHeaderCellDef> Category </mat-header-cell>
+                                <mat-cell *matCellDef="let row"> {{row.category}} </mat-cell>
                             </ng-container>
 
                             <ng-container matColumnDef="kilometersNumber">
-                                <mat-header-cell *matHeaderCellDef> klm </mat-header-cell>
-                                <mat-cell *matCellDef="let row"> {{row.kilometersNumber}} </mat-cell>
+                                <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+                                <mat-cell *matCellDef="let row"> {{row.description}} </mat-cell>
                             </ng-container>
                           
                             <ng-container matColumnDef="model">
-                                <mat-header-cell *matHeaderCellDef> Model </mat-header-cell>
-                                <mat-cell *matCellDef="let row"> {{row.modelName}} </mat-cell>
+                                <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
+                                <mat-cell *matCellDef="let row"> {{row.price}} </mat-cell>
                             </ng-container>
 
                             <ng-container matColumnDef="status">
@@ -38,28 +38,21 @@
                                 <mat-cell *matCellDef="let row"> <label class="badge"
                                         [ngClass]="{'badge-success': row.status === 'available', 'badge-primary': row.status === 'reserved', 'badge-danger': row.status === 'panne'}">{{row.status}}</label></mat-cell>
                             </ng-container>
-                            <ng-container matColumnDef="fuelType">
-                                <mat-header-cell *matHeaderCellDef> FuelType </mat-header-cell>
-                                <mat-cell *matCellDef="let row"> {{row.fuelType}} </mat-cell>
-                            </ng-container>
+                            
                             <ng-container matColumnDef="actions">
                                 <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
                                 <mat-cell *matCellDef="let row">
                                      <button mat-raised-button style="background-color:hsl(332, 100%, 71%)"
-                                      matTooltip="Delete vehicle"
+                                      matTooltip="Delete produit"
                                         class="custom-button" (click)="deleteVehicle(row.id)">
                                         <mat-icon matSuffix>delete</mat-icon>
                                     </button>
                                     <button mat-raised-button style="background-color:powderblue" 
-                                     matTooltip="Edit vehicle" class="custom-button"
+                                     matTooltip="Edit produit" class="custom-button"
                                         (click)="edit(row.id)"><mat-icon matSuffix>edit</mat-icon>
                                     </button>
 
-                                    <button mat-raised-button style="background-color:deepskyblue" class="custom-button"
-                                    matTooltip="Assign vehicle"
-                                        (click)="assignVehicle(row.id)"><mat-icon
-                                            matSuffix>check</mat-icon>
-                                    </button>
+                                    
                                 </mat-cell>
                             </ng-container>
 

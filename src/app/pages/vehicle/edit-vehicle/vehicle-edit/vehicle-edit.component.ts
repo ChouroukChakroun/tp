@@ -34,4 +34,7 @@ export class VehicleEditComponent implements OnInit {
     this.ref.close()
   }
 
+  cancel() {
+    this.ref.close()
+  }
 }

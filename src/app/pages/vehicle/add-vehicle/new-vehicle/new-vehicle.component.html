@@ -5,73 +5,40 @@
 
                 <mat-form-field>
                     <mat-icon matPrefix color="primary">color_lens</mat-icon>
-                    <input matInput required placeholder="vin" name="vin" [(ngModel)]="vehicleDto.vin">
+                    <input matInput required placeholder="Name" name="vin" [(ngModel)]="vehicleDto.vin">
                     <mat-error>This field is mandatory.</mat-error>
                 </mat-form-field>
                 <mat-form-field>
 
-                    <input matInput required placeholder="placeNumber" name="placeNumber"
+                    <input matInput required placeholder="category" name="placeNumber"
                         [(ngModel)]="vehicleDto.placeNumber" (keydown)="filterNonNumericInput($event)">
                     <mat-error>This field is mandatory.</mat-error>
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput placeholder="kilometersNumber" name="kilometersNumber"
+                    <input matInput placeholder="description" name="kilometersNumber"
                         [(ngModel)]="vehicleDto.kilometersNumber" (keydown)="filterNonNumericInput($event)">
 
                 </mat-form-field>
-                <mat-form-field>
-                    <mat-icon matPrefix color="primary">local_gas_station</mat-icon>
-                    <mat-label>Fuel type</mat-label>
-                    <mat-select [(ngModel)]="vehicleDto.fuelType">
-                        <mat-option value="gasoline">Gasoline</mat-option>
-                        <mat-option value="Diesel">Diesel</mat-option>
-                        <mat-option value="electricity">Electricity</mat-option>
-                        <mat-option value="LPG">LPG</mat-option>
-                        <mat-option value="CNG">CNG</mat-option>
-                    </mat-select>
-                </mat-form-field>
+                
 
                 <mat-form-field>
                     <mat-label>Status</mat-label>
                     <mat-select [(ngModel)]="vehicleDto.status">
-                        <mat-option value="in Maintenance">In Maintenance</mat-option>
+                        <mat-option value="repture de stock">Repture de stock</mat-option>
                         <mat-option value="available">Available</mat-option>
                        
                     </mat-select>
                 </mat-form-field>
-
-            </div>
-        </mat-grid-tile>
-        <mat-grid-tile>
-            <div class="controles-container">
-                <mat-form-field>
-                    <mat-icon matPrefix color="primary">color_lens</mat-icon>
-                    <mat-label>Color</mat-label>
-                    <mat-select [(ngModel)]="vehicleDto.color">
-                        <mat-option value="gris">Gris</mat-option>
-                        <mat-option value="red">Red</mat-option>
-                        <mat-option value="black">Black</mat-option>
-                       
-                    </mat-select>
-                    <mat-error>This field is mandatory.</mat-error>
-                </mat-form-field>
-                <mat-form-field>
-                    <mat-label>Select model</mat-label>
-                    <mat-select [(ngModel)]="selectedValue" name="model">
-                        <mat-option *ngFor="let model of modelList" [value]="model.name">{{model.name}}</mat-option>
-                    </mat-select>
-                </mat-form-field>
-
-
                 <div class="button-row">
                     <button mat-raised-button color="accent" (click)="onSubmit()">
-                        <mat-icon matPrefix>send</mat-icon>Submit
+                        <mat-icon button style="background-color:hsl(332, 100%, 71%)" matPrefix>send</mat-icon>Submit
                     </button>
                     <button mat-raised-button color="primary" class="custom-button" (click)="cancel()"><mat-icon
-                            matPrefix>cancel</mat-icon>Cancel</button>
+                            matPrefix >cancel</mat-icon>Cancel</button>
                 </div>
-            </div>
 
+            </div>
         </mat-grid-tile>
+       
     </mat-grid-list>
 </form>

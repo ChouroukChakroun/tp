@@ -8,6 +8,7 @@ interface Product {
   category: string;
   description: string;
   price: number;
+  imageUrl
   // Autres propriétés
 }
 @Component({
@@ -25,13 +26,22 @@ export class MissionListComponent implements OnInit {
       name: 'Clavier mécanique',
       category: 'Périphérique',
       description: 'Clavier mécanique pour une expérience de frappe améliorée.',
-      price: 99.99
+      price: 99.99,
+      imageUrl:'assets/clavier.jpg'
+    },
+    {
+      name: 'Clavier mécanique',
+      category: 'Périphérique',
+      description: 'Clavier mécanique pour une expérience de frappe améliorée.',
+      price: 99.99,
+      imageUrl:'assets/téléchargement.jpg'
     },
     {
       name: 'Souris gamer',
       category: 'Périphérique',
       description: 'Souris optimisée pour le gaming avec boutons programmables.',
-      price: 49.99
+      price: 49.99,
+      imageUrl:'assets/souris.jpg'
     },
     // Autres produits
   ];

@@ -4,41 +4,22 @@
             <div class="controles-container">
                 <input type="hidden">
                 <mat-form-field>
-                    <mat-icon matPrefix color="primary">directions_car</mat-icon>
-                    <input matInput  placeholder="vin" name="vin" [(ngModel)]="vehicleDto.vin">       
-                </mat-form-field>
-                <mat-form-field>
-                    <mat-icon matPrefix color="primary">color_lens</mat-icon>
-                    <mat-label>Color</mat-label>
-                    <mat-select [(ngModel)]="vehicleDto.color">
-                        <mat-option value="gris">Gris</mat-option>
-                        <mat-option value="red">Red</mat-option>
-                       
-                    </mat-select>
                     
+                    <input matInput  placeholder="Name" name="vin" [(ngModel)]="vehicleDto.vin">       
                 </mat-form-field>
+            
                 <mat-form-field>
 
-                    <input matInput placeholder="placeNumber" name="placeNumber"
+                    <input matInput placeholder="category" name="placeNumber"
                         [(ngModel)]="vehicleDto.placeNumber">
                    
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput placeholder="kilometersNumber" name="kilometersNumber"
+                    <input matInput placeholder="description" name="kilometersNumber"
                         [(ngModel)]="vehicleDto.kilometersNumber">
 
                 </mat-form-field>
-                <mat-form-field>
-                    <mat-icon matPrefix color="primary">local_gas_station</mat-icon>
-                    <mat-label>FuelType</mat-label>
-                    <mat-select [(ngModel)]="vehicleDto.fuelType">
-                        <mat-option value="gasoline">Gasoline</mat-option>
-                        <mat-option value="Diesel">Diesel</mat-option>
-                        <mat-option value="electricity">Electricity</mat-option>
-                        <mat-option value="LPG">LPG</mat-option>
-                        <mat-option value="CNG">CNG</mat-option>
-                    </mat-select>
-                </mat-form-field>
+                
 
             </div>
         </mat-grid-tile>
@@ -57,16 +38,18 @@
                     </mat-select>
                 </mat-form-field-->
                 <mat-form-field>
+                    <mat-label>Status</mat-label>
                     <mat-select [(ngModel)]="vehicleDto.status">
-                        <mat-option value="in Maintenance">In Maintenance</mat-option>
+                        <mat-option value="repture de stock">In Maintenance</mat-option>
                         <mat-option value="available">Available</mat-option>
                        
                     </mat-select>
                 </mat-form-field>
 
                 <div class="button-row">
-                    <button mat-raised-button color="primary" (click)="onSubmit()"> <mat-icon matPrefix>send</mat-icon>Submit</button>
-
+                    <button mat-raised-button style="background-color:hsl(332, 100%, 71%)" (click)="onSubmit()"> <mat-icon matPrefix>send</mat-icon>Submit</button>
+                    <button mat-raised-button color="primary" class="custom-button" (click)="cancel()"><mat-icon
+                        matPrefix>cancel</mat-icon>Cancel</button>
                 </div>
             </div>
 
